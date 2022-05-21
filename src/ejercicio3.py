@@ -21,15 +21,13 @@ def compara(numero, otro_numero):
         print(0)
         print("Son iguales")
     else:
-        numero = str(numero)
-        otro_numero = str(otro_numero)
-        
+      
         if restados > 0:
             print(1)
-            print(numero + " es mayor que " + otro_numero)
+            print(f"{numero} es mayor que {otro_numero}")
         else:
             print(-1)
-            print(numero + " es menor que " + otro_numero)
+            print(f"{numero} es menor que {otro_numero}")
         
 def principal():
     """
@@ -38,8 +36,8 @@ def principal():
     Si da mayor que cero es porque numero_a es mas grande que numero_b.
     Y sino se cumplen las condiciones anteriores, numero_b es mayor que numero_a.
     """
-    numero_a = int(input("Ingrese numero a: "))
-    numero_b = int(input("Ingrese numero b: "))
+    numero_a = float(input("Ingrese numero a: "))
+    numero_b = float(input("Ingrese numero b: "))
     compara(numero_a, numero_b)
     pass
 

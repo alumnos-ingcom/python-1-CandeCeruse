@@ -42,10 +42,8 @@ def convertir_a_centigrados(valor_a_convertir):
     return convertido_a_centigrados
 
 def imprimir_resultado(centigrados, fahrenheit):
-    centigrados=str(centigrados)
-    fahrenheit=str(fahrenheit)
-    print(centigrados + " grados centigrados son " + fahrenheit + " grados fahrenheit")
-    print(fahrenheit + " grados fahrenheit son " + centigrados + " grados centigrados")
+    print(f"{centigrados: .2f} grados centigrados son {fahrenheit: .2f} grados fahrenheit")
+    print(f"{fahrenheit: .2f} grados fahrenheit son {centigrados: .2f} grados centigrados")
 
 if __name__ == "__main__":
     principal()
