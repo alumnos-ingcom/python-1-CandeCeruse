@@ -6,7 +6,7 @@
 """
 Enunciado del ejercicio
 """
-# Reemplazar por las funciones del ejercicio
+# Funciones del ejercicio
 
 
 def principal():
@@ -19,3 +19,6 @@ def principal():
 if __name__ == "__main__":
     principal()
 
+"""
+Fin de ejercicio
+"""
