@@ -10,7 +10,7 @@ Escribir una función que reciba un número e indique si el mismo es positivo,
 negativo o cero utilizando sumas y restas.
 """
 
-# Reemplazar por las funciones a implementar del ejercicio
+# Funciones del ejercicio
 def signo(numero):
     numero_original = numero
     numero_mas_1 = numero + 1
