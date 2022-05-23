@@ -20,12 +20,15 @@ def suma_lenta(numero, otro_numero):
     if otro_numero < 0 :
         print(f"{numero} + ({otro_numero})")
         otro_numero=otro_numero * -1
-        for i in range(otro_numero):
+        
+        while otro_numero > 0:
             numero=numero-1
+            otro_numero-=1
             print(f"+ (-1) = {numero}")
     else:
         print(f"{numero} + {otro_numero}")
-        for i in range(otro_numero):
+        while otro_numero > 0:
+            otro_numero-=1
             numero=numero+1
             print(f"+1 = {numero}")
             
