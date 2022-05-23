@@ -31,7 +31,7 @@ def signo_divisor(divisor):
         print(f"Divisor= {divisor}\n")
     return divisor
 
-def division_lenta(dividendo, divisor, dividendo_original, divisor_original):
+def division_lenta(dividendo, divisor):
     '''
     Funcion responsable de hacer las restas sucesivas.
     Los datos ingresados ya fueron filtrados por las funciones
@@ -47,20 +47,32 @@ def division_lenta(dividendo, divisor, dividendo_original, divisor_original):
         while dividendo >= divisor:
             print(f"{dividendo} - {divisor}")
             dividendo = dividendo - divisor
-            print(f"     = {dividendo}")
             cociente = cociente + 1 #sumo cada vez que el divisor entre en el dividendo
-            continue
-        print("-------------")   
-        print(f"{dividendo_original} / {divisor_original} = {cociente}")
+            print(f"Resto = {dividendo}")
+        print("-------------")
+        print("Resultado: \n")
         print(f"Resto = {dividendo}")
+        return cociente
         
+        
+def signo_cociente(cociente, dividendo_original, divisor_original):
+    if divisor_original < 0 and dividendo_original < 0:
+        pass
+    elif divisor_original < 0 or dividendo_original < 0:
+        cociente = cociente * -1
+    print(f"{dividendo_original} / {divisor_original} = {cociente}")
 
 def principal():
     """
+    Este programa toma los datos ingresados y les cambia el signo
+    si son negativos. Luego analiza si el dividendo es cero, si no lo es
+    empieza las restas sucesivas para conseguir el cociente y el resto.
+    Una vez que no se puede restar el divisor al dividendo el programa
+    termina y muestra los resultados.
     
     """
-    dividendo = int(input("Ingrese divisor: "))
-    divisor = int(input("Ingrese dividendo: "))
+    dividendo = int(input("Ingrese dividendo: "))
+    divisor = int(input("Ingrese divisor: "))
     
     dividendo_original = dividendo
     divisor_original = divisor
@@ -69,7 +81,9 @@ def principal():
     '''
     dividendo_positivo = signo_dividendo(dividendo)
     divisor_positivo = signo_divisor(divisor)
-    division_lenta(dividendo_positivo, divisor_positivo, dividendo_original, divisor_original)
+    
+    cociente = division_lenta(dividendo_positivo, divisor_positivo)
+    signo_cociente(cociente, dividendo_original, divisor_original)
     pass
 
 if __name__ == "__main__":
