@@ -11,27 +11,31 @@ obtenga el valor del cociente y resto de dos números enteros.
 """
 # Funciones del ejercicio
 
-def signo_dividendo(dividendo):
+def signos(dividendo, divisor):
     '''
-    Cambia el signo si el dividendo es negativo
+    Cambia el signo si alguno es negativo
     '''
-    if dividendo < 0:
+    if dividendo < 0 and divisor < 0:
+        dividendo = dividendo * -1 #lo hago positivo para que no haga quilombo
+        divisor = divisor * -1 #lo hago positivo para que no haga quilombo
+        signo = 1
+    elif dividendo < 0:
         print("\nCambio de signo dividendo")
         dividendo = dividendo * -1 #lo hago positivo para que no haga quilombo
+        signo = -1
         print(f"Dividendo= {dividendo}")
-    return dividendo
-
-def signo_divisor(divisor):
-    '''
-    Cambia el signo si el divisor es negativo
-    '''
-    if divisor < 0:
+        
+    elif divisor < 0:
         print("\nCambio de signo divisor")
         divisor = divisor * -1 #lo hago positivo para que no haga quilombo
-        print(f"Divisor= {divisor}\n")
-    return divisor
+        signo = -1
+        print(f"Divisor= {dividendo}")
+    else:
+        signo = 1
+    return dividendo, divisor, signo
 
-def division_lenta(dividendo, divisor):
+
+def division_lenta(dividendo, divisor, signo, dividendo_original, divisor_original):
     '''
     Funcion responsable de hacer las restas sucesivas.
     Los datos ingresados ya fueron filtrados por las funciones
@@ -49,18 +53,12 @@ def division_lenta(dividendo, divisor):
             dividendo = dividendo - divisor
             cociente = cociente + 1 #sumo cada vez que el divisor entre en el dividendo
             print(f"Resto = {dividendo}")
+        cociente = cociente * signo
         print("-------------")
         print("Resultado: \n")
+        print(f"{dividendo_original} / {divisor_original} = {cociente}")
         print(f"Resto = {dividendo}")
-        return cociente
-        
-        
-def signo_cociente(cociente, dividendo_original, divisor_original):
-    if divisor_original < 0 and dividendo_original < 0:
-        pass
-    elif divisor_original < 0 or dividendo_original < 0:
-        cociente = cociente * -1
-    print(f"{dividendo_original} / {divisor_original} = {cociente}")
+  
 
 def principal():
     """
@@ -79,11 +77,10 @@ def principal():
     '''
     Guardo las variables originales
     '''
-    dividendo_positivo = signo_dividendo(dividendo)
-    divisor_positivo = signo_divisor(divisor)
+    dividendo_positivo, divisor_positivo, signo = signos(dividendo, divisor)
     
-    cociente = division_lenta(dividendo_positivo, divisor_positivo)
-    signo_cociente(cociente, dividendo_original, divisor_original)
+    division_lenta(dividendo_positivo, divisor_positivo, signo, dividendo_original, divisor_original)
+
     pass
 
 if __name__ == "__main__":
