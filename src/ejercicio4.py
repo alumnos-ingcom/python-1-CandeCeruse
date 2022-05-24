@@ -6,7 +6,10 @@
 """
 4. Suma lenta
 
-Escribir una función que haga la suma entre dos números enteros sin hacer la operación de manera directa. Esto quiere decir que para hacer la suma entre 4 y 3, las operaciones resultantes deberán ser 4+1+1+1.
+Escribir una función que haga la suma entre dos números
+enteros sin hacer la operación de manera directa.
+Esto quiere decir que para hacer la suma entre 4 y 3,
+las operaciones resultantes deberán ser 4+1+1+1.
 
 La funcion debe ser capaz de sumar cualquier numero entero positivo y negativo.
 """
@@ -20,7 +23,7 @@ def suma_lenta(numero, otro_numero):
     if otro_numero < 0 :
         print(f"{numero} + ({otro_numero})")
         otro_numero=otro_numero * -1
-        
+
         while otro_numero > 0:
             numero=numero-1
             otro_numero-=1
@@ -31,7 +34,7 @@ def suma_lenta(numero, otro_numero):
             otro_numero-=1
             numero=numero+1
             print(f"+1 = {numero}")
-            
+
     print(f"Total = {numero}")
 
 def principal():
@@ -43,10 +46,7 @@ def principal():
     numero_a = int(input("Ingrese numero a: "))
     numero_b = int(input("Ingrese numero b: "))
     suma_lenta(numero_a, numero_b)
-    pass
+
 
 if __name__ == "__main__":
     principal()
-'''
-Fin de ejercicio
-'''

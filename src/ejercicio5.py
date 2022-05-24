@@ -24,7 +24,7 @@ def signos(dividendo, divisor):
         dividendo = dividendo * -1 #lo hago positivo para que no haga quilombo
         signo = -1
         print(f"Dividendo= {dividendo}")
-        
+
     elif divisor < 0:
         print("\nCambio de signo divisor")
         divisor = divisor * -1 #lo hago positivo para que no haga quilombo
@@ -42,10 +42,10 @@ def division_lenta(dividendo, divisor, signo, dividendo_original, divisor_origin
     de cambio de signo.
     '''
     cociente = 0
-    
+
     if divisor == 0:
         print("No se puede dividir por cero")
-        
+
     else:
         print("\nFuncion division lenta: ")
         while dividendo >= divisor:
@@ -58,7 +58,7 @@ def division_lenta(dividendo, divisor, signo, dividendo_original, divisor_origin
         print("Resultado: \n")
         print(f"{dividendo_original} / {divisor_original} = {cociente}")
         print(f"Resto = {dividendo}")
-  
+
 
 def principal():
     """
@@ -67,25 +67,18 @@ def principal():
     empieza las restas sucesivas para conseguir el cociente y el resto.
     Una vez que no se puede restar el divisor al dividendo el programa
     termina y muestra los resultados.
-    
+
     """
     dividendo = int(input("Ingrese dividendo: "))
     divisor = int(input("Ingrese divisor: "))
-    
-    dividendo_original = dividendo
-    divisor_original = divisor
-    '''
-    Guardo las variables originales
-    '''
-    dividendo_positivo, divisor_positivo, signo = signos(dividendo, divisor)
-    
-    division_lenta(dividendo_positivo, divisor_positivo, signo, dividendo_original, divisor_original)
 
-    pass
+    dividendo_original = dividendo
+    divisor_original = divisor #Guardo las variables originales
+
+    dividendo_positivo, divisor_positivo, signo = signos(dividendo, divisor)
+
+    division_lenta(dividendo_positivo, divisor_positivo, signo,
+                   dividendo_original, divisor_original)
 
 if __name__ == "__main__":
     principal()
-
-"""
-Fin de ejercicio
-"""

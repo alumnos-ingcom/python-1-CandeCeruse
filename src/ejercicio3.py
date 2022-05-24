@@ -15,20 +15,24 @@ Escribir una función que utilizando sumas y restas, reciba dos valores y retorn
 """
 #Funciones del ejercicio
 def compara(numero, otro_numero):
+    """
+    Esta función resta el otro_numero a numero. Luego
+    compara el resultado de esa resta y si es igual a cero significa
+    que son iguales. Si es mayor que cero numero es mayor que otro_numero.
+    Pero si el resultado es menor que cero, entonces otro_numero es mayor.
+    """
     restados = numero - otro_numero
-    
     if restados == 0:
         print(0)
         print("Son iguales")
     else:
-      
         if restados > 0:
             print(1)
             print(f"{numero} es mayor que {otro_numero}")
         else:
             print(-1)
             print(f"{numero} es menor que {otro_numero}")
-        
+
 def principal():
     """
     Despues de ingresar ambos numeros, se resta numero_b al numero_a.
@@ -39,11 +43,6 @@ def principal():
     numero_a = float(input("Ingrese numero a: "))
     numero_b = float(input("Ingrese numero b: "))
     compara(numero_a, numero_b)
-    pass
 
 if __name__ == "__main__":
     principal()
-
-"""
-Fin del ejercicio
-"""
