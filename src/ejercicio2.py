@@ -13,7 +13,7 @@ negativo o cero utilizando sumas y restas.
 # Funciones del ejercicio
 def signo(numero):
     """
-    Esta función crea dos variable nuevas a oartir del
+    Esta función crea dos variable nuevas a partir del
     numero ingresado: el numero más y menos 1.
     Luego analiza esas variables comparándolas a 0 y devuelve
     si es positivo, negativo o cero.
@@ -22,11 +22,12 @@ def signo(numero):
     numero_menos_1 = numero - 1
     if numero_mas_1 > 0:
         if numero_menos_1 >= 0:
-            print("Es positivo")
+            resultado = 1
         else:
-            print("Es cero")
+            resultado = 0
     else:
-        print("Es negativo")
+        resultado = -1
+    return resultado
 
 def principal():
     """
@@ -38,7 +39,10 @@ def principal():
     menor que cero entonces el numero es cero.
     """
     numero_ingresado = int(input("Ingrese numero\n"))
-    signo(numero_ingresado)
+    print("La funcion devuelve 1 si es positivo.")
+    print("La funcion devuelve -1 si es negativo.")
+    print("La funcion devuelve 0 si es cero.")
+    print(signo(numero_ingresado))
 
 if __name__ == "__main__":
     principal()
