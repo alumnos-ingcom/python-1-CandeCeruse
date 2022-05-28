@@ -15,21 +15,6 @@ utilice esta formula para calcular los grados centígrados
 y retorne el resultado obtenido. Y viceversa.
 """
 
-def principal():
-    """
-    Este programa toma el input de grados centigrados,
-    los envia a la función convertir_a_fahrenheit y la
-    salida en fahrenheit es convertida a grados centigrados
-    de nuevo. Al final muestra los resultados.
-    """
-
-    centigrados = int(input("Ingrese grados centigrados\n"))
-
-    fahrenheit = convertir_a_fahrenheit(centigrados)
-    nuevos_centigrados = convertir_a_centigrados(fahrenheit)
-
-    imprimir_resultado(nuevos_centigrados , fahrenheit)
-
 #FUNCIONES:
 
 def convertir_a_fahrenheit(valor_a_convertir):
@@ -48,13 +33,22 @@ def convertir_a_centigrados(valor_a_convertir):
     convertido_a_centigrados = float(((valor_a_convertir - 32) * 5) / 9)
     return convertido_a_centigrados
 
-def imprimir_resultado(centigrados, fahrenheit):
+def principal():
     """
-    Esta función imprime los resultados, con el objetivo
-    de tener más prolijidad en la función principal.
+    Este programa toma el input de grados centigrados,
+    los envia a la función convertir_a_fahrenheit y la
+    salida en fahrenheit es convertida a grados centigrados
+    de nuevo. Al final muestra los resultados.
     """
+
+    centigrados = int(input("Ingrese grados centigrados\n"))
+
+    fahrenheit = convertir_a_fahrenheit(centigrados)
+    nuevos_centigrados = convertir_a_centigrados(fahrenheit)
+
     print(f"{centigrados: .2f} grados centigrados son {fahrenheit: .2f} grados fahrenheit")
-    print(f"{fahrenheit: .2f} grados fahrenheit son {centigrados: .2f} grados centigrados")
+    print(f"{fahrenheit: .2f} grados fahrenheit son {nuevos_centigrados: .2f} grados centigrados")
+
 
 if __name__ == "__main__":
     principal()
