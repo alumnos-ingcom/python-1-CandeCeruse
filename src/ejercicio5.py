@@ -35,7 +35,7 @@ def signos(dividendo, divisor):
     return dividendo, divisor, signo
 
 
-def division_lenta(dividendo, divisor, signo, dividendo_original, divisor_original):
+def division_lenta(dividendo, divisor, signo):
     '''
     Funcion responsable de hacer las restas sucesivas.
     Los datos ingresados ya fueron filtrados por las funciones
@@ -52,13 +52,10 @@ def division_lenta(dividendo, divisor, signo, dividendo_original, divisor_origin
             print(f"{dividendo} - {divisor}")
             dividendo = dividendo - divisor
             cociente = cociente + 1 #sumo cada vez que el divisor entre en el dividendo
-            print(f"Resto = {dividendo}")
+            resto = dividendo
+            print(f"Resultado = {dividendo}")
         cociente = cociente * signo
-        print("-------------")
-        print("Resultado: \n")
-        print(f"{dividendo_original} / {divisor_original} = {cociente}")
-        print(f"Resto = {dividendo}")
-
+    return cociente, resto
 
 def principal():
     """
@@ -71,14 +68,16 @@ def principal():
     """
     dividendo = int(input("Ingrese dividendo: "))
     divisor = int(input("Ingrese divisor: "))
-
     dividendo_original = dividendo
     divisor_original = divisor #Guardo las variables originales
 
     dividendo_positivo, divisor_positivo, signo = signos(dividendo, divisor)
 
-    division_lenta(dividendo_positivo, divisor_positivo, signo,
-                   dividendo_original, divisor_original)
+    cociente, resto = division_lenta(dividendo_positivo, divisor_positivo, signo)
+    print("-------------")
+    print("Resultado: \n")
+    print(f"{dividendo_original} / {divisor_original} = {cociente}")
+    print(f"Resto = {resto}")
 
 if __name__ == "__main__":
     principal()
