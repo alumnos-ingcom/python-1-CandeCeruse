@@ -6,9 +6,7 @@ import pytest
 
 from src.ejercicio5 import signos, division_lenta
 """
-Describir aquí que es lo que se esta probando.
-Tengan en cuenta que el archivo tiene que llamarse igual
-que el archivo a probar agregando antes `test_`
+Este programa es un test para las funciones signos y division_lenta
 """
 
 def test_signos_ambos_positivos():
