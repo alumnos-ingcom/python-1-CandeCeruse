@@ -23,15 +23,13 @@ def compara(numero, otro_numero):
     """
     restados = numero - otro_numero
     if restados == 0:
-        print(0)
-        print("Son iguales")
+        resultado = 0
     else:
         if restados > 0:
-            print(1)
-            print(f"{numero} es mayor que {otro_numero}")
+            resultado = 1
         else:
-            print(-1)
-            print(f"{numero} es menor que {otro_numero}")
+            resultado = -1
+    return resultado
 
 def principal():
     """
@@ -42,7 +40,10 @@ def principal():
     """
     numero_a = float(input("Ingrese numero a: "))
     numero_b = float(input("Ingrese numero b: "))
-    compara(numero_a, numero_b)
+    print("Retornar -1 si el primero es menor que el segundo")
+    print("Retornar 0 si son iguales")
+    print("Retornar 1 si el primero es mayor que el segundo")
+    print(f"Resultado: {compara(numero_a, numero_b)}")
 
 if __name__ == "__main__":
     principal()

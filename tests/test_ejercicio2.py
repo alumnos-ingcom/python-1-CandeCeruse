@@ -6,14 +6,14 @@ import pytest
 
 from src.ejercicio2 import signo
 """
-Estos son los test correspondienets al archivo `ejercicio1.py` que esta en
-`src`. Escribir una función que reciba un número e indique si el mismo es positivo,
+Estos son los test correspondienets al archivo `ejercicio2.py` que esta en
+`src`. Es una función que recibe un número e indica si el mismo es positivo,
 negativo o cero utilizando sumas y restas.
 """
 
 def test_signo_positivo():
     """
-       Una breve descripción del caso de prueba aplicado a la función
+    Comprueba si el numero es negativo.
     """
     numero = 10
     resultado = signo(numero)
@@ -22,7 +22,7 @@ def test_signo_positivo():
 
 def test_signo_negativo():
     """
-       Una breve descripción del caso de prueba aplicado a la función
+    Comprueba si el numero es negativo
     """
     numero = -10
     resultado = signo(numero)
@@ -31,7 +31,7 @@ def test_signo_negativo():
 
 def test_signo_cero():
     """
-       Una breve descripción del caso de prueba aplicado a la función
+    Comprueba su el numero es cero.
     """
     numero = 0
     resultado = signo(numero)
