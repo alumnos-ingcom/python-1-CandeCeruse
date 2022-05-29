@@ -34,8 +34,7 @@ def decimal_a_sexadecimal(segundos):
     minutos_segundos = resto_horas // 60
     resto_minutos = resto_horas % 60
     segundos_convertidos  = resto_minutos
-    resultado = (f"Resultado: {horas_segundos}hs, {minutos_segundos}', {segundos_convertidos}''")
-    return resultado
+    return horas_segundos, minutos_segundos, segundos_convertidos
 
 def principal():
     """
@@ -47,8 +46,8 @@ def principal():
     segundos = int(input("Ingrese segundos: "))
     suma_segundos = sexadecimal_a_decimal(horas, minutos, segundos)
     print(f"Segundos: {suma_segundos}")
-    resultado = decimal_a_sexadecimal(suma_segundos)
-    print(f"{resultado}")
+    horas_segundos, minutos_segundos, segundos_convertidos = decimal_a_sexadecimal(suma_segundos)
+    print(f"Resultado: {horas_segundos}hs, {minutos_segundos}', {segundos_convertidos}''")
 
 if __name__ == "__main__":
     principal()

@@ -31,7 +31,8 @@ def ordenar_mayor_a_menor(uno, dos, tres):
             posicion_b = cadena[i+1]
             cadena[i] = posicion_b
             cadena[i+1] = posicion_a
-    return cadena
+    tupla = (cadena[0], cadena[1], cadena[2])
+    return tupla
 
 def ordenar_menor_a_mayor(uno, dos, tres):
     """
@@ -53,7 +54,8 @@ def ordenar_menor_a_mayor(uno, dos, tres):
             posicion_b = cadena[i+1]
             cadena[i] = posicion_b
             cadena[i+1] = posicion_a
-    return cadena
+    tupla = (cadena[0], cadena[1], cadena[2])
+    return tupla
 
 def principal():
     """
