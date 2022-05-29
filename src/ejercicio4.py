@@ -22,20 +22,20 @@ def suma_lenta(numero, otro_numero):
     '''
     if otro_numero < 0 :
         print(f"{numero} + ({otro_numero})")
-        otro_numero=otro_numero * -1
+        otro_numero = otro_numero * -1
 
         while otro_numero > 0:
-            numero=numero-1
-            otro_numero-=1
+            numero = numero-1
+            otro_numero -= 1
             print(f"+ (-1) = {numero}")
     else:
         print(f"{numero} + {otro_numero}")
         while otro_numero > 0:
-            otro_numero-=1
-            numero=numero+1
+            otro_numero -= 1
+            numero = numero + 1
             print(f"+1 = {numero}")
 
-    print(f"Total = {numero}")
+    return numero
 
 def principal():
     """
@@ -45,8 +45,7 @@ def principal():
     """
     numero_a = int(input("Ingrese numero a: "))
     numero_b = int(input("Ingrese numero b: "))
-    suma_lenta(numero_a, numero_b)
-
+    print(f"Total = {suma_lenta(numero_a, numero_b)}")
 
 if __name__ == "__main__":
     principal()

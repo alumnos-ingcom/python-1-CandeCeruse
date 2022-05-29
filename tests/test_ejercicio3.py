@@ -6,9 +6,9 @@ import pytest
 
 from src.ejercicio3 import compara
 """
-Describir aquí que es lo que se esta probando.
-Tengan en cuenta que el archivo tiene que llamarse igual
-que el archivo a probar agregando antes `test_`
+Test dedicados a un programa que compara dos numeros.
+Y devuelve 1 si el primero es mayor que el segundo.
+-1 si el segundo es mayor. Y 0 si son iguales.
 """
 
 def test_compara_numero_mayor_otronumero():
