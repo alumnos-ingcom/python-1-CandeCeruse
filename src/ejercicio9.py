@@ -27,7 +27,7 @@ def factores_primos(numero):
             lista_primos.append(divisor)
         else:
             divisor+=1
-    tupla_primos = (lista_primos)
+    tupla_primos = tuple(lista_primos)
     return tupla_primos
 
 def principal():

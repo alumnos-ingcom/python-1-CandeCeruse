@@ -21,13 +21,14 @@ def es_palindromo(palabra):
     texto = palabra.replace(" ","")
     posicion_inicio = -len(texto)
     posicion_fin = len(texto)-1
-    while posicion_fin >=0 :
+    while posicion_fin >= 0 :
         if texto[posicion_inicio] == texto[posicion_fin]:
             posicion_inicio += 1
             posicion_fin -= 1
-            palindromo=True
+            palindromo = True
         else:
             palindromo = False
+            break
     return palindromo
 
 def principal():
