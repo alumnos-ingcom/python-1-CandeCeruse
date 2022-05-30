@@ -1,8 +1,10 @@
 ################
-# Nombre - @usuario_github
+# Candelaria Ceruse - @CandeCeruse
 # UNRN Andina - Introducción a la Ingenieria en Computación
 ################
+import pytest
 
+from src.ejercicio import funcion
 """
 Describir aquí que es lo que se esta probando.
 Tengan en cuenta que el archivo tiene que llamarse igual
